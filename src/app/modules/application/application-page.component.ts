@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {BreakpointObserver} from "@angular/cdk/layout";
 import {takeUntil} from "rxjs";
-import {Unsubscriber} from "../../shared/components/unsubscriber/unsubscriber.component";
+import {UnsubscriberComponent} from "../../shared/components/unsubscriber/unsubscriber.component";
 import {menuLinks} from "../../shared/constants/menu-links.constants";
 
 @Component({
@@ -9,10 +9,10 @@ import {menuLinks} from "../../shared/constants/menu-links.constants";
   templateUrl: './application-page.component.html',
   styleUrls: ['./application-page.component.scss']
 })
-export class ApplicationPageComponent extends Unsubscriber implements OnInit {
+export class ApplicationPageComponent extends UnsubscriberComponent implements OnInit {
   events: string[] = [];
-  opened: boolean = false;
-  isMobile: boolean = false;
+  opened = false;
+  isMobile = false;
 
   constructor(
     private breakpointObserver: BreakpointObserver

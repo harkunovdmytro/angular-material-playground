@@ -1,4 +1,4 @@
-$header-height: 50px;
+@import "variables";
 
 .container {
   height: calc(100vh - $header-height);

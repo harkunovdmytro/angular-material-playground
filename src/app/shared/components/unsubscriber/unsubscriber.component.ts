@@ -1,11 +1,11 @@
-import {Component, OnDestroy} from '@angular/core';
-import {Subject} from "rxjs";
+import { Component, OnDestroy } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-unsubscriber',
-  templateUrl: './unsubscriber.component.html',
+  template: '',
 })
-export class Unsubscriber implements OnDestroy {
+export class UnsubscriberComponent implements OnDestroy {
   public unsubscribe = new Subject<void>();
 
   public ngOnDestroy(): void {

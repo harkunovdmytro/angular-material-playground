@@ -1,174 +1,174 @@
-import {IMenuLink} from '../interfaces/menu-link.interface';
+import { IMenuLink } from '../interfaces/menu-link.interface';
 
 export const menuLinks: IMenuLink[] = [
   {
     name: 'Home',
     link: '/',
-    active: true
+    active: true,
   },
   {
     name: 'Autocomplete',
     link: 'autocomplete',
-    active: true
+    active: true,
   },
   {
     name: 'Badge',
     link: 'badge',
-    active: false
+    active: false,
   },
   {
     name: 'Bottom sheet',
     link: 'bottom-sheet',
-    active: false
+    active: false,
   },
   {
     name: 'Button',
     link: 'button',
-    active: false
+    active: false,
   },
   {
     name: 'Button Toggle',
     link: 'button-toggle',
-    active: false
+    active: false,
   },
   {
     name: 'Card',
     link: 'card',
-    active: false
+    active: false,
   },
   {
     name: 'Checkbox',
     link: 'checkbox',
-    active: false
+    active: false,
   },
   {
     name: 'Chips',
     link: 'chips',
-    active: false
+    active: false,
   },
   {
     name: 'Core',
     link: 'core',
-    active: false
+    active: false,
   },
   {
     name: 'Datepicker',
     link: 'datepicker',
-    active: false
+    active: false,
   },
   {
     name: 'Dialog',
     link: 'dialog',
-    active: false
+    active: false,
   },
   {
     name: 'Divider',
     link: 'divider',
-    active: false
+    active: false,
   },
   {
     name: 'Expansion Panel',
     link: 'expansion-panel',
-    active: false
+    active: false,
   },
   {
     name: 'Grid List',
     link: 'grid-list',
-    active: false
+    active: false,
   },
   {
     name: 'Icon',
     link: 'icon',
-    active: false
+    active: false,
   },
   {
     name: 'Input',
     link: 'input',
-    active: false
+    active: false,
   },
   {
     name: 'List',
     link: 'list',
-    active: false
+    active: false,
   },
   {
     name: 'Progress Bar',
     link: 'progress-bar',
-    active: false
+    active: false,
   },
   {
     name: 'Progress Spinner',
     link: 'progress-spinner',
-    active: false
+    active: false,
   },
   {
     name: 'Radio Button',
     link: 'radio-button',
-    active: false
+    active: false,
   },
   {
     name: 'Ripples',
     link: 'ripples',
-    active: false
+    active: false,
   },
   {
     name: 'Select',
     link: 'select',
-    active: false
+    active: false,
   },
   {
     name: 'Sidenav',
     link: 'sidenav',
-    active: false
+    active: false,
   },
   {
     name: 'Slide Toggle',
     link: 'slide-toggle',
-    active: false
+    active: false,
   },
   {
     name: 'Slider',
     link: 'slider',
-    active: false
+    active: false,
   },
   {
     name: 'Snackbar',
     link: 'snackbar',
-    active: false
+    active: false,
   },
   {
     name: 'Sort Header',
     link: 'sort-header',
-    active: false
+    active: false,
   },
   {
     name: 'Stepper',
     link: 'stepper',
-    active: false
+    active: false,
   },
   {
     name: 'Table',
     link: 'table',
-    active: false
+    active: false,
   },
   {
     name: 'Tabs',
     link: 'tabs',
-    active: false
+    active: false,
   },
   {
     name: 'Toolbar',
     link: 'toolbar',
-    active: false
+    active: false,
   },
   {
     name: 'Tooltip',
     link: 'tooltip',
-    active: false
+    active: false,
   },
   {
     name: 'Tree',
     link: 'tree',
-    active: false
+    active: false,
   },
 ];

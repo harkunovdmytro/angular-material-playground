@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './modules/home-page/home-page.component';
-import { Unsubscriber } from './shared/components/unsubscriber/unsubscriber.component';
+import { UnsubscriberComponent } from './shared/components/unsubscriber/unsubscriber.component';
 import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    Unsubscriber
+    UnsubscriberComponent
   ],
   imports: [
     BrowserModule,

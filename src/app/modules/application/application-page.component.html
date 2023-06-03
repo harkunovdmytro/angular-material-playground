@@ -1,31 +1,10 @@
-<!--<div>-->
-<!--  <header>-->
-<!--    <button>Open</button>-->
-<!--    <span style="margin-right: 20px">Component Header</span>-->
-<!--  </header>-->
-<!--  <div class="application">-->
-<!--    &lt;!&ndash;    <app-sidebar></app-sidebar>&ndash;&gt;-->
-<!--    <div class="sidebar">-->
-<!--      <mat-nav-list>-->
-<!--        <a routerLink="/">a</a>-->
-<!--        <a routerLink="/">b</a>-->
-<!--        <a routerLink="/">c</a>-->
-<!--      </mat-nav-list>-->
-<!--    </div>-->
-<!--    <main>-->
-<!--      <router-outlet></router-outlet>-->
-<!--    </main>-->
-<!--  </div>-->
-<!--</div>-->
-
 <header>
   <mat-toolbar class="toolbar">
-    <button
-      *ngIf="isMobile"
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with menu icon"
-      (click)="sidenav.toggle()"
+    <button *ngIf="isMobile"
+            mat-icon-button
+            class="example-icon"
+            aria-label="Example icon-button with menu icon"
+            (click)="sidenav.toggle()"
     >
       <mat-icon>menu</mat-icon>
     </button>
