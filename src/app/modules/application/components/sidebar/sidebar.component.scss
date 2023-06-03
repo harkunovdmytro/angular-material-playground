@@ -1,0 +1,40 @@
+@import "variables";
+
+.sidebar {
+
+  &-wrapper {
+    height: 100vh;
+    display: inline-block;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  &-menu,
+  mat-sidenav-container {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+
+    &-item {
+      width: 200px;
+      padding: 0 10px;
+    }
+
+    &-link {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: $black;
+      border-radius: 10px;
+      font-weight: 400;
+
+      &.active {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<section class="home-page">
+  <div>
+    <h2 class="list-header">Done pages</h2>
+    <ul>
+      <ng-container *ngFor="let menuItem of menuItems">
+        <li *ngIf="menuItem.active" class="list-item">
+          <mat-icon class="icon done-icon">done</mat-icon>
+          <a class="sidebar-menu-link"
+             [routerLink]="menuItem.link"
+          >{{ menuItem.name }}</a>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+
+  <div>
+    <h2 class="list-header">Undone pages</h2>
+    <ul>
+      <ng-container *ngFor="let menuItem of menuItems">
+        <li *ngIf="!menuItem.active" class="list-item">
+          <mat-icon class="icon undone-icon">close</mat-icon>
+          <span
+            class="sidebar-menu-link"
+          >{{ menuItem.name }}</span>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+
+</section>

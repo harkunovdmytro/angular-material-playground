@@ -1,0 +1,28 @@
+$header-height: 50px;
+
+.container {
+  height: calc(100vh - $header-height);
+}
+
+.application {
+  display: flex;
+
+  main {
+    flex-grow: 1;
+  }
+}
+
+header {
+  height: $header-height;
+  width: 100%;
+
+  .toolbar {
+    align-items: center;;
+  }
+}
+
+.sidebar {
+  display: inline-block;
+  width: 240px;
+  height: 100%;
+}

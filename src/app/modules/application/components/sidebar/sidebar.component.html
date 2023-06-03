@@ -1,0 +1,36 @@
+<!-- <aside class="sidebar-wrapper"> -->
+<!--   <ul class="sidebar-menu"> -->
+<!--     <ng-container *ngFor="let menuItem of menuItems"> -->
+<!--       <li *ngIf="!menuItem.disabled" class="sidebar-menu-item"> -->
+<!--         <a -->
+<!--           class="sidebar-menu-link" -->
+<!--           routerLinkActive="active" -->
+<!--           [routerLink]="menuItem.link" -->
+<!--         >{{ menuItem.name }}</a> -->
+<!--       </li> -->
+<!--     </ng-container> -->
+<!--   </ul> -->
+<!-- </aside> -->
+
+<aside class="sidebar-wrapper" style="display: inline-block; width: 200px; height: 100vh">
+  <mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')" *ngIf="shouldRun">
+    <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+      <p>
+        <button mat-button (click)="close('toggle button')">Toggle</button>
+      </p>
+
+      <mat-nav-list>
+        <a mat-list-item> aaa </a>
+        <a mat-list-item> bbb </a>
+        ------
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <p>
+        <button mat-button (click)="sidenav.open()">Open</button>
+      </p>
+      <p>Closed due to: {{reason}}</p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</aside>
