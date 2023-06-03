@@ -1,0 +1,37 @@
+<header>
+  <mat-toolbar class="toolbar">
+    <button *ngIf="isMobile"
+            mat-icon-button
+            class="example-icon"
+            aria-label="Example icon-button with menu icon"
+            (click)="sidenav.toggle()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Header</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+</header>
+
+<mat-sidenav-container class="container">
+  <mat-sidenav class="sidebar"
+               mode="side"
+               #sidenav
+               [opened]="!isMobile || opened"
+               (closed)="events.push('close!')"
+               (opened)="events.push('open!')"
+  >
+    <mat-nav-list>
+      <ng-container *ngFor="let menuItem of menuLinks">
+        <mat-list-item *ngIf="menuItem.active" [routerLink]="menuItem.link">
+          {{ menuItem.name }}
+        </mat-list-item>
+      </ng-container>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
