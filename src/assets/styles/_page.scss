@@ -1,0 +1,30 @@
+@import "variables";
+
+.page {
+  padding: 20px;
+
+  .edit-form {
+    margin-bottom: 30px;
+
+    .form-label {
+      display: block;
+      padding: 10px 20px;
+
+      .edit-form-header {
+
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .control-value {
+    display: flex;
+
+    pre {
+      margin: 0;
+    }
+  }
+}

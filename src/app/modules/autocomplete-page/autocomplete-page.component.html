@@ -1,0 +1,94 @@
+<section class="page autocomplete-page">
+  <div>
+    <h2>Usual autocomplete</h2>
+    <div>
+      <div>
+        <p>Allowed inputs</p>
+        <ul>
+          <li>aria-label: string</li>
+          <li>aria-labelledby: string</li>
+          <li>autoActiveFirstOption: boolean</li>
+          <li>autoSelectActiveOption: boolean</li>
+          <li>class: string | string[]</li>
+          <li>disableRipple: boolean</li>
+          <li>displayWith: ((value: any) => string) | null - mapper function</li>
+          <li>hideSingleSelectionIndicator: boolean</li>
+          <li>panelWidth: string | number</li>
+          <li>opened: EventEmitter void</li>
+          <li>closed: EventEmitter void</li>
+          <li>optionActivated: EventEmitter MatAutocompleteActivatedEvent </li>
+          <li>optionSelected: EventEmitter MatAutocompleteActivatedEvent </li>
+          <li>id: string</li>
+          <li>isOpened: boolean</li>
+          <li>optionsGroup: QueryList MatOptgroup</li>
+          <li>options: QueryList MatOptgroup</li>
+          <li>panel: ElementRef</li>
+          <li>showPanel: boolean</li>
+        </ul>
+      </div>
+      <div>
+        <div class="edit-form">
+          <h3 class="edit-form-header">Inputs</h3>
+          <label class="form-label" for="autocomplete-placeholder">
+            <span>Placeholder</span>
+            <input type="text"
+                   id="autocomplete-placeholder"
+                   placeholder="Placeholder"
+                   [formControl]="autocompleteForm.controls.placeholder">
+          </label>
+          <label class="form-label" for="autocomplete-label">
+            <span>Label</span>
+            <input type="text"
+                   id="autocomplete-label"
+                   placeholder="Label"
+                   [formControl]="autocompleteForm.controls.label">
+          </label>
+          <label class="form-label" for="autocomplete-set-panel-width">
+            <span>Custom width</span>
+            <input type="checkbox"
+                   matCheck
+                   min="200"
+                   max="1000"
+                   id="autocomplete-set-panel-width"
+                   placeholder="Panel Width"
+                   [formControl]="autocompleteForm.controls.isCustomWidth">
+          </label>
+          <mat-checkbox [formControl]="autocompleteForm.controls.isCustomWidth">asdqwd</mat-checkbox>
+          <pre>{{autocompleteForm.controls.isCustomWidth.value | json}}</pre>
+          <label class="form-label" for="autocomplete-panel-width">
+            <span>Panel Width</span>
+            <input type="range"
+                   min="200"
+                   max="1000"
+                   id="autocomplete-panel-width"
+                   placeholder="Panel Width"
+                   [formControl]="autocompleteForm.controls.panelWidth">
+          </label>
+        </div>
+      </div>
+      <div>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>{{ autocompleteForm.controls.label.value || 'Numbers' }}</mat-label>
+            <input type="text"
+                   [placeholder]="autocompleteForm.controls.placeholder.value || 'Pick one'"
+                   aria-label="Number"
+                   matInput
+                   [formControl]="autocompleteControl"
+                   [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete" [panelWidth]="(autocompleteForm.controls.isCustomWidth && autocompleteForm.controls.panelWidth.value) || ''">
+              <mat-option *ngFor="let option of filteredOptions" [value]="option">
+                {{ option }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <div class="control-value">
+            <span>Autocomplete control value </span>
+            <span><pre>{{ autocompleteForm.controls.label.value | json }}</pre></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>
