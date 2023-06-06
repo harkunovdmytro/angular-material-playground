@@ -1,0 +1,17 @@
+<section class="page bottom-sheet-page">
+  <div>
+    <h2>Usual Bottom Sheet</h2>
+    <div class="example-form">
+      <button mat-raised-button (click)="openBottomSheet()">Open bottom sheet with Angular Component</button>
+      <button mat-raised-button (click)="openBottomSheetWithTemplate(template)">Open bottom sheet with Angular
+        Tempalate
+      </button>
+
+      <ng-template #template>
+        <h1 style="text-align: center">I am Template!</h1>
+        <img style="width: 100%; height: auto; object-fit: cover"
+             src="https://media0.giphy.com/media/YRuFixSNWFVcXaxpmX/giphy.gif" alt="">
+      </ng-template>
+    </div>
+  </div>
+</section>

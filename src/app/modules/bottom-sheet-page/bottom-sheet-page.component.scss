@@ -1,0 +1,10 @@
+@import "variables";
+@import "page";
+
+.bottom-sheet-page {
+  .example-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

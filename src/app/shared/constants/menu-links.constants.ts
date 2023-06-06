@@ -19,7 +19,7 @@ export const menuLinks: IMenuLink[] = [
   {
     name: 'Bottom sheet',
     link: 'bottom-sheet',
-    active: false,
+    active: true,
   },
   {
     name: 'Button',
