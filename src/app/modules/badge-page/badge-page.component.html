@@ -1,0 +1,109 @@
+<section class="page badge-page">
+  <div>
+    <h2>Usual badge</h2>
+    <div>
+      <div>
+        <p>Allowed inputs</p>
+        <ul>
+          <li>aria-label: string</li>
+        </ul>
+      </div>
+      <div>
+        <div class="edit-form">
+          <h3 class="edit-form-header">Inputs</h3>
+          <label class="form-label" for="badge-value">
+            <span>Badge Value - <span>{{ badgeForm.controls.badgeValue.value || 4 }}</span></span>
+            <input type="range"
+                   min="1"
+                   max="100"
+                   id="badge-value"
+                   placeholder="Badge Value"
+                   [formControl]="badgeForm.controls.badgeValue">
+          </label>
+
+          <label class="form-label" for="badge-size">
+            <span>Badge Size - <span>{{ bargeSize }}</span></span>
+            <input type="range"
+                   min="0"
+                   max="2"
+                   step="1"
+                   id="badge-size"
+                   placeholder="Badge Size"
+                   [formControl]="badgeForm.controls.size">
+          </label>
+
+          <label class="form-label" for="badge-position">
+            <span>Badge Position - <span>{{ bargePosition }}</span></span>
+            <input type="range"
+                   min="0"
+                   max="7"
+                   step="1"
+                   id="badge-position"
+                   placeholder="Badge Position"
+                   [formControl]="badgeForm.controls.position">
+          </label>
+
+          <label class="form-label" for="badge-colors">
+            <span>Badge Colors - <span>{{ bargeColor | json }}</span></span>
+            <input type="range"
+                   min="0"
+                   max="2"
+                   step="1"
+                   id="badge-colors"
+                   placeholder="Badge Position"
+                   [formControl]="badgeForm.controls.color">
+          </label>
+
+          <label class="form-label" for="badge-overlap">
+            <span>Badge Overlap - <span>{{ badgeForm.controls.overlap.value }}</span></span>
+            <mat-checkbox id="badge-overlap"
+                          [formControl]="badgeForm.controls.overlap"
+            >
+              {{ (badgeForm.value.overlap ? 'Remove' : 'Set') + ' Overlap' }}
+            </mat-checkbox>
+          </label>
+
+          <label class="form-label" for="badge-disabled">
+            <span>Badge Disabled - <span>{{ badgeForm.value.disabled }}</span></span>
+            <mat-checkbox id="badge-disabled" color="primary" [formControl]="badgeForm.controls.disabled">
+              {{ badgeForm.value.disabled ? 'Enable' : 'Disable' }}
+            </mat-checkbox>
+          </label>
+        </div>
+      </div>
+      <div>
+        <div class="example-form">
+          <div [matBadge]="badgeForm.controls.badgeValue.value || 0" matBadgeOverlap="false">Edit badge value</div>
+
+          <div
+            matBadgeOverlap="false"
+            [matBadge]="4"
+            [matBadgeSize]="bargeSize"
+          >
+            Barge Size
+          </div>
+
+          <button mat-raised-button matBadge="7" [matBadgeHidden]="hidden" (click)="hidden = !hidden">
+            {{ hidden ? 'Show' : 'Hide' }}
+          </button>
+
+          <button mat-raised-button matBadge="7" [matBadgePosition]="bargePosition">Badge's Positions
+          </button>
+
+          <button mat-raised-button matBadge="7" [matBadgeColor]="bargeColor">
+            Badge Colors
+          </button>
+
+          <button mat-raised-button matBadge="7" [matBadgeOverlap]="!!badgeForm.value.overlap">
+            Badge Overlap
+          </button>
+
+          <button mat-raised-button matBadge="7" [matBadgeDisabled]="!!badgeForm.value.disabled">
+            Badge Disabled
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

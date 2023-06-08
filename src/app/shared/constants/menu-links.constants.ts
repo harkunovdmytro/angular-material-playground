@@ -14,7 +14,7 @@ export const menuLinks: IMenuLink[] = [
   {
     name: 'Badge',
     link: 'badge',
-    active: false,
+    active: true,
   },
   {
     name: 'Bottom sheet',

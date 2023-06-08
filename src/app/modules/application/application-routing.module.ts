@@ -27,6 +27,17 @@ const routes: Routes = [
         },
         title: 'autocomplete',
       },
+      {
+        path: 'badge',
+        loadChildren: () =>
+          import('../badge-page/badge-page.module').then(
+            (m) => m.BadgePageModule
+          ),
+        data: {
+          title: 'badge',
+        },
+        title: 'badge',
+      },
     ],
   },
 ];

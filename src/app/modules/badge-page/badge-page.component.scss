@@ -1,0 +1,14 @@
+@import "variables";
+@import "page";
+
+.badge-page {
+  .example-form {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  input[type=range] {
+    width: min(100%, 250px);
+  }
+}
