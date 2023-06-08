@@ -60,6 +60,17 @@ const routes: Routes = [
         },
         title: 'Button',
       },
+      {
+        path: 'button-toggle',
+        loadChildren: () =>
+          import('../button-toggle-page/button-toggle-page.module').then(
+            (m) => m.ButtonTogglePageModule
+          ),
+        data: {
+          title: 'Button Toggle',
+        },
+        title: 'Button Toggle',
+      },
     ],
   },
 ];
