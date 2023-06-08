@@ -1,0 +1,11 @@
+@import "variables";
+@import "page";
+
+.mat-button-page {
+  .buttons-row {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}

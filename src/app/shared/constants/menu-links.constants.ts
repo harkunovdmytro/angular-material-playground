@@ -24,7 +24,7 @@ export const menuLinks: IMenuLink[] = [
   {
     name: 'Button',
     link: 'button',
-    active: false,
+    active: true,
   },
   {
     name: 'Button Toggle',

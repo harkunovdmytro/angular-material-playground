@@ -49,6 +49,17 @@ const routes: Routes = [
         },
         title: 'Bottom Sheet',
       },
+      {
+        path: 'button',
+        loadChildren: () =>
+          import('../mat-button-page/mat-button-page.module').then(
+            (m) => m.MatButtonPageModule
+          ),
+        data: {
+          title: 'Button',
+        },
+        title: 'Button',
+      },
     ],
   },
 ];
