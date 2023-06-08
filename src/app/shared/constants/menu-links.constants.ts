@@ -29,7 +29,7 @@ export const menuLinks: IMenuLink[] = [
   {
     name: 'Button Toggle',
     link: 'button-toggle',
-    active: false,
+    active: true,
   },
   {
     name: 'Card',

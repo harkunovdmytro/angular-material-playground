@@ -1,0 +1,162 @@
+<section class="page button-toggle-page">
+  <div>
+    <h2>Usual Button Toggle</h2>
+    <section>
+      <h3>MatButtonToggleGroup</h3>
+      <h4>Inputs</h4>
+      <ul>
+        <li>appearance: MatButtonToggleAppearance ('legasy' | 'standart')</li>
+        <li>disabled: boolean</li>
+        <li>multiple: boolean</li>
+        <li>name: string</li>
+        <li>value: any</li>
+        <li>vertical: boolean</li>
+      </ul>
+      <h4>Outputs</h4>
+      <ul>
+        <li>change: EventEmitter MatButtonToggleChange</li>
+      </ul>
+      <h4>Others</h4>
+      <ul>
+        <li>selected: MatButtonToggle | MatButtonToggle[]</li>
+      </ul>
+    </section>
+    <hr>
+    <section>
+      <h3>MatButtonToggle</h3>
+      <h4>Inputs</h4>
+      <ul>
+        <li>appearance: MatButtonToggleAppearance ('legasy' | 'standart')</li>
+        <li>ariaLabel: string</li>
+        <li>ariaLabelledby: string | null</li>
+        <li>checked: boolean</li>
+        <li>disableRipple: boolean</li>
+        <li>id: string</li>
+        <li>name: string</li>
+        <li>value: any</li>
+      </ul>
+      <h4>Outputs</h4>
+      <ul>
+        <li>change: EventEmitter MatButtonToggleChange</li>
+      </ul>
+      <h4>Others</h4>
+      <ul>
+        <li>buttonId: string</li>
+        <li>buttonToggleGroup: MatButtonToggleGroup</li>
+      </ul>
+    </section>
+    <hr>
+    <div class="example-form">
+      <div class="example">
+        <p>
+          Default appearance:
+          <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="bold">Bold</mat-button-toggle>
+            <mat-button-toggle value="italic">Italic</mat-button-toggle>
+            <mat-button-toggle value="underline">Underline</mat-button-toggle>
+          </mat-button-toggle-group>
+        </p>
+      </div>
+
+      <div class="example">
+        <p>
+          Legacy appearance:
+          <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="bold">Bold</mat-button-toggle>
+            <mat-button-toggle value="italic">Italic</mat-button-toggle>
+            <mat-button-toggle value="underline">Underline</mat-button-toggle>
+          </mat-button-toggle-group>
+        </p>
+      </div>
+
+      <div class="example">
+        <mat-button-toggle-group #group="matButtonToggleGroup">
+          <mat-button-toggle value="left" aria-label="Text align left">
+            <mat-icon>format_align_left</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="center" aria-label="Text align center">
+            <mat-icon>format_align_center</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="right" aria-label="Text align right">
+            <mat-icon>format_align_right</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="justify" disabled aria-label="Text align justify">
+            <mat-icon>format_align_justify</mat-icon>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+        <div class="example-selected-value">Selected value: {{group.value}}</div>
+      </div>
+
+      <div class="example">
+        <h4>Button Toggle inside of a Template-driven form</h4>
+        <mat-button-toggle-group [(ngModel)]="fontStyle" aria-label="Font Style">
+          <mat-button-toggle value="bold">Bold</mat-button-toggle>
+          <mat-button-toggle value="italic">Italic</mat-button-toggle>
+          <mat-button-toggle value="underline">Underline</mat-button-toggle>
+        </mat-button-toggle-group>
+        <p>Chosen value is {{fontStyle}}</p>
+      </div>
+
+      <div class="example">
+        <h4>Button Toggle inside of a Reactive form</h4>
+        <mat-button-toggle-group [formControl]="fontStyleControl" aria-label="Font Style">
+          <mat-button-toggle value="bold">Bold</mat-button-toggle>
+          <mat-button-toggle value="italic">Italic</mat-button-toggle>
+          <mat-button-toggle value="underline">Underline</mat-button-toggle>
+        </mat-button-toggle-group>
+        <p>Chosen value is {{fontStyleControl.value}}</p>
+      </div>
+
+      <div class="example">
+        <p>Set Button Toggle Appearance</p>
+        <mat-button-toggle-group [formControl]="appearanceControl">
+          <mat-button-toggle value="legacy">Legacy</mat-button-toggle>
+          <mat-button-toggle value="standard">Standard</mat-button-toggle>
+        </mat-button-toggle-group>
+
+        <div style="padding: 30px">
+          <mat-button-toggle-group [disabled]="disabled" [appearance]="appearanceControl.value || 'legacy'">
+            <mat-button-toggle value="1">One</mat-button-toggle>
+            <mat-button-toggle value="2">Two</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>Single selection</h4>
+        <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color">
+          <mat-button-toggle value="red">Red</mat-button-toggle>
+          <mat-button-toggle value="green">Green</mat-button-toggle>
+          <mat-button-toggle value="blue">Blue</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+
+      <div class="example">
+        <h4>Multiple selection</h4>
+        <mat-button-toggle-group name="ingredients" aria-label="Ingredients" multiple>
+          <mat-button-toggle value="flour">Flour</mat-button-toggle>
+          <mat-button-toggle value="eggs">Eggs</mat-button-toggle>
+          <mat-button-toggle value="sugar">Sugar</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+
+      <div class="example">
+        <h4>Basic Button Toggles</h4>
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+          <mat-button-toggle value="bold">Bold</mat-button-toggle>
+          <mat-button-toggle value="italic">Italic</mat-button-toggle>
+          <mat-button-toggle value="underline">Underline</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+
+      <div class="example">
+        <h4>Vertical</h4>
+        <mat-button-toggle-group vertical="true" name="fontStyle" aria-label="Font Style">
+          <mat-button-toggle value="bold">Bold</mat-button-toggle>
+          <mat-button-toggle value="italic">Italic</mat-button-toggle>
+          <mat-button-toggle value="underline">Underline</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+    </div>
+  </div>
+</section>
