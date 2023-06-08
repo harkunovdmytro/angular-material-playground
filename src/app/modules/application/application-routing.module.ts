@@ -38,6 +38,17 @@ const routes: Routes = [
         },
         title: 'badge',
       },
+      {
+        path: 'bottom-sheet',
+        loadChildren: () =>
+          import('../bottom-sheet-page/bottom-sheet-page.module').then(
+            (m) => m.BottomSheetPageModule
+          ),
+        data: {
+          title: 'Bottom Sheet',
+        },
+        title: 'Bottom Sheet',
+      },
     ],
   },
 ];

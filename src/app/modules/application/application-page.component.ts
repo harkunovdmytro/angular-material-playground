@@ -3,12 +3,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { filter, first, takeUntil } from 'rxjs';
 import { UnsubscriberComponent } from '../../shared/components/unsubscriber/unsubscriber.component';
 import { menuLinks } from '../../shared/constants/menu-links.constants';
-import {
-  ActivatedRoute,
-  ActivationEnd,
-  ActivationStart,
-  Router,
-} from '@angular/router';
+import { ActivatedRoute, ActivationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-application',
