@@ -71,6 +71,15 @@ const routes: Routes = [
         },
         title: 'Button Toggle',
       },
+      {
+        path: 'card',
+        loadChildren: () =>
+          import('../card-page/card-page.module').then((m) => m.CardPageModule),
+        data: {
+          title: 'Card',
+        },
+        title: 'Card',
+      },
     ],
   },
 ];

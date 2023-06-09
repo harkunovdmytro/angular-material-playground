@@ -34,7 +34,7 @@ export const menuLinks: IMenuLink[] = [
   {
     name: 'Card',
     link: 'card',
-    active: false,
+    active: true,
   },
   {
     name: 'Checkbox',
