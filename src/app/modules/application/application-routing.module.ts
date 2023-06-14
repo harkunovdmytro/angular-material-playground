@@ -80,6 +80,17 @@ const routes: Routes = [
         },
         title: 'Card',
       },
+      {
+        path: 'checkbox',
+        loadChildren: () =>
+          import('../checkbox-page/checkbox-page.module').then(
+            (m) => m.CheckboxPageModule
+          ),
+        data: {
+          title: 'Checkbox',
+        },
+        title: 'Checkbox',
+      },
     ],
   },
 ];

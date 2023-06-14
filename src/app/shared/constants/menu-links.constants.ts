@@ -39,7 +39,7 @@ export const menuLinks: IMenuLink[] = [
   {
     name: 'Checkbox',
     link: 'checkbox',
-    active: false,
+    active: true,
   },
   {
     name: 'Chips',
