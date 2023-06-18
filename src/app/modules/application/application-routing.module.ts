@@ -91,6 +91,17 @@ const routes: Routes = [
         },
         title: 'Checkbox',
       },
+      {
+        path: 'chips',
+        loadChildren: () =>
+          import('../chips-page/chips-page.module').then(
+            (m) => m.ChipsPageModule
+          ),
+        data: {
+          title: 'Chips',
+        },
+        title: 'Chips',
+      },
     ],
   },
 ];

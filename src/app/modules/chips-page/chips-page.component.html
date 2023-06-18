@@ -1,0 +1,323 @@
+<section class="page chips-page">
+  <div>
+    <h2>Usual Mat Chips</h2>
+    <p>Chips allow users to view information, make selections, filter content, and enter data.</p>
+
+    <!--  MatChip  -->
+    <div>
+      <h3>MatChip</h3>
+      <p>Material design styled Chip base component. Used inside the MatChipSet component.</p>
+      <p>Extended by MatChipOption and MatChipRow for different interaction patterns</p>
+      <h4>Inputs</h4>
+      <ul>
+        <li>ariaDescription: string</li>
+        <li>ariaLabel: string</li>
+        <li>color: ThemePalette</li>
+        <li>disableRipple: boolean</li>
+        <li>disabled: boolean</li>
+        <li>highlighted: boolean</li>
+        <li>removable: boolean</li>
+        <li>id: string</li>
+        <li>role: string | null</li>
+      </ul>
+
+      <h4>Outputs</h4>
+      <ul>
+        <li>destroyed: EventEmitter MatChipEvent</li>
+        <li>removed: EventEmitter MatChipEvent</li>
+      </ul>
+
+      <h4>Others</h4>
+      <li>basicChipAttrName: 'mat-basic-chip'</li>
+      <li>defaultColor: ThemePalette | undefined</li>
+      <li>defaultTabIndex: number</li>
+      <li>leadingIcon: MatChipAvatar</li>
+      <li>primaryAction: MatChipAction</li>
+      <li>removeIcon: MatChipRemove</li>
+      <li>trailIcon: MatChipTrailingIcon</li>
+    </div>
+
+    <!--  MatChipOption  -->
+    <div>
+      <h3>MatChipOption extends MatChip</h3>
+      <p>An extension of the MatChip component that supports chip selection. Used with MatChipListbox.</p>
+<p>Unlike other chips, the user can focus on disabled chip options inside a MatChipListbox. The user cannot click disabled chips.</p>
+      <h4>Inputs</h4>
+      <ul>
+        <li>ariaDescription: string</li>
+        <li>ariaLabel: string</li>
+        <li>color: ThemePalette</li>
+        <li>disableRipple: boolean</li>
+        <li>disabled: boolean</li>
+        <li>highlighted: boolean</li>
+        <li>removable: boolean</li>
+        <li>selectable: boolean</li>
+        <li>selected: boolean</li>
+        <li>value: boolean</li>
+        <li>id: string</li>
+        <li>role: string | null</li>
+      </ul>
+
+      <h4>Outputs</h4>
+      <ul>
+        <li>destroyed: EventEmitter MatChipEvent</li>
+        <li>removed: EventEmitter MatChipEvent</li>
+        <li>selectionChange: EventEmitter MatChipSelectionChange</li>
+      </ul>
+
+      <h4>Others</h4>
+      <li>ariaSelected: string | null</li>
+      <li>basicChipAttrName: 'mat-basic-chip-option'</li>
+      <li>defaultColor: ThemePalette | undefined</li>
+      <li>defaultTabIndex: number</li>
+      <li>leadingIcon: MatChipAvatar</li>
+      <li>primaryAction: MatChipAction</li>
+      <li>removeIcon: MatChipRemove</li>
+      <li>trailIcon: MatChipTrailingIcon</li>
+    </div>
+
+    <!--  MatChipRow  -->
+    <div>
+      <h3>MatChipOption extends MatChip</h3>
+      <p>An extension of the MatChip component used with MatChipGrid and the matChipInputFor directive</p>
+      <h4>Inputs</h4>
+      <ul>
+        <li>ariaDescription: string</li>
+        <li>ariaLabel: string</li>
+        <li>color: ThemePalette</li>
+        <li>disableRipple: boolean</li>
+        <li>disabled: boolean</li>
+        <li>highlighted: boolean</li>
+        <li>removable: boolean</li>
+        <li>selectable: boolean</li>
+        <li>selected: boolean</li>
+        <li>value: boolean</li>
+        <li>id: string</li>
+        <li>role: string | null</li>
+      </ul>
+
+      <h4>Outputs</h4>
+      <ul>
+        <li>destroyed: EventEmitter MatChipEvent</li>
+        <li>edited: EventEmitter MatChipEditedEvent</li>
+        <li>removed: EventEmitter MatChipEvent</li>
+        <li>selectionChange: EventEmitter MatChipSelectionChange</li>
+      </ul>
+
+      <h4>Others</h4>
+      <li>ariaSelected: string | null</li>
+      <li>basicChipAttrName: 'mat-basic-chip-row'</li>
+      <li>defaultColor: ThemePalette | undefined</li>
+      <li>defaultTabIndex: number</li>
+      <li>leadingIcon: MatChipAvatar</li>
+      <li>primaryAction: MatChipAction</li>
+      <li>removeIcon: MatChipRemove</li>
+      <li>trailIcon: MatChipTrailingIcon</li>
+    </div>
+
+    <!--  MatChipSet  -->
+    <div>
+      <h3>MatChipSet</h3>
+      <p>Basic container component for the MatChip component.</p>
+      <p>Extended by MatChipListbox and MatChipGrid for different interaction patterns.</p>
+      <h4>Inputs</h4>
+      <ul>
+        <li>disabled: boolean</li>
+        <li>role: string | null</li>
+      </ul>
+
+      <h4>Others</h4>
+      <li>chipDestroyedChanges: Observable MatChipEvent</li>
+      <li>chipFocusChanges: Observable MatChipEvent</li>
+      <li>defaultTabIndex: number</li>
+      <li>empty: boolean</li>
+      <li>focused: boolean</li>
+    </div>
+
+    <!--  MatChipListbox  -->
+    <div>
+      <h3>MatChipListbox extends MatChipSet</h3>
+      <p>An extension of the MatChipSet component that supports chip selection. Used with MatChipOption chips.</p>
+      <h4>Inputs</h4>
+      <ul>
+        <li>ariaOrientation: 'horizontal' | 'vertical'</li>
+        <li>compareWith: (o1: any, o2: any) => boolean</li>
+        <li>disabled: boolean</li>
+        <li>hideSingleSelectionIndicator: boolean</li>
+        <li>multiple: boolean</li>
+        <li>required: boolean</li>
+        <li>selected: boolean</li>
+        <li>role: string | null</li>
+        <li>selectable: boolean</li>
+        <li>id: string</li>
+      </ul>
+
+      <h4>Outputs</h4>
+      <ul>
+        <li>change: EventEmitter MatChipEvent</li>
+      </ul>
+
+      <h4>Others</h4>
+      <li>chipBlurChanges: Observable MatChipEvent</li>
+      <li>chipDestroyChanges: Observable MatChipEvent</li>
+      <li>chipFocusChanges: Observable MatChipEvent</li>
+      <li>chipSelectionChanges: Observable MatChipEvent</li>
+      <li>defaultTabIndex: number</li>
+      <li>empty: boolean</li>
+      <li>focused: boolean</li>
+      <li>selected: MatChipOption[] | MatChipOption</li>
+    </div>
+
+    <!--  MatChipListbox  -->
+    <div>
+      <h3>MatChipListbox extends MatChipSet</h3>
+      <p>An extension of the MatChipSet component that supports chip selection. Used with MatChipOption chips.</p>
+      <h4>Inputs</h4>
+      <ul>
+        <li>ariaDescription: string</li>
+        <li>ariaLabel: string</li>
+        <li>color: ThemePalette</li>
+        <li>disableRipple: boolean</li>
+        <li>disabled: boolean</li>
+        <li>highlighted: boolean</li>
+        <li>removable: boolean</li>
+        <li>selectable: boolean</li>
+        <li>selected: boolean</li>
+        <li>value: boolean</li>
+        <li>id: string</li>
+        <li>role: string | null</li>
+      </ul>
+
+      <h4>Outputs</h4>
+      <ul>
+        <li>destroyed: EventEmitter MatChipEvent</li>
+        <li>edited: EventEmitter MatChipEditedEvent</li>
+        <li>removed: EventEmitter MatChipEvent</li>
+        <li>selectionChange: EventEmitter MatChipSelectionChange</li>
+      </ul>
+
+      <h4>Others</h4>
+      <li>ariaSelected: string | null</li>
+      <li>basicChipAttrName: 'mat-basic-chip-row'</li>
+      <li>defaultColor: ThemePalette | undefined</li>
+      <li>defaultTabIndex: number</li>
+      <li>leadingIcon: MatChipAvatar</li>
+      <li>primaryAction: MatChipAction</li>
+      <li>removeIcon: MatChipRemove</li>
+      <li>trailIcon: MatChipTrailingIcon</li>
+    </div>
+
+    <div class="examples">
+      <p>mat-chop-listbox + mat-chip-option</p>
+      <div class="example">
+        <mat-chip-listbox aria-label="Fish selection">
+          <mat-chip-option>One fish</mat-chip-option>
+          <mat-chip-option>Two fish</mat-chip-option>
+          <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+          <mat-chip-option color="warn">Warn fish</mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+
+      <p>mat-chop-listbox + mat-chip-option</p>
+      <div class="example">
+        <mat-chip-listbox aria-label="Fish selection">
+          <mat-chip-option disabled>One fish</mat-chip-option>
+          <mat-chip-option disabled>Two fish</mat-chip-option>
+          <mat-chip-option disabled color="accent" selected>Accent fish</mat-chip-option>
+          <mat-chip-option disabled color="warn">Warn fish</mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+
+      <p>mat-chop-listbox + mat-basic-chip | mat-chip + custom styles</p>
+      <div class="example">
+        <mat-chip-listbox aria-label="Fish selection">
+          <mat-chip>One fish</mat-chip>
+          <mat-basic-chip class="my-basic-chip">Two fish</mat-basic-chip>
+          <mat-basic-chip color="accent" selected>Accent fish</mat-basic-chip>
+          <mat-basic-chip color="warn">Warn fish</mat-basic-chip>
+        </mat-chip-listbox>
+      </div>
+
+      <p>mat-form-field + mat-chip-grid + mat-chip-row + mat-basic-chip | mat-chip + custom styles</p>
+      <div class="example">
+        <mat-form-field class="example-chip-list">
+          <mat-label>Favorite Fruits</mat-label>
+          <mat-chip-grid #chipGrid aria-label="Enter fruits">
+            <mat-chip-row *ngFor="let fruit of fruits"
+                          (removed)="remove(fruit)"
+                          [editable]="true"
+                          (edited)="edit(fruit, $event)"
+                          [aria-description]="'press enter to edit ' + fruit.name">
+              {{fruit.name}}
+              <button matChipRemove [attr.aria-label]="'remove ' + fruit.name">
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip-row>
+            <input placeholder="New fruit..."
+                   [matChipInputFor]="chipGrid"
+                   [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                   [matChipInputAddOnBlur]="addOnBlur"
+                   (matChipInputTokenEnd)="add($event)"/>
+          </mat-chip-grid>
+        </mat-form-field>
+      </div>
+
+      <p>mat-form-field + mat-chip-grid + mat-chip-row + </p>
+      <div class="example">
+        <form>
+          <mat-form-field class="example-chip-list">
+            <mat-label>Favorite Fruits</mat-label>
+            <mat-chip-grid #chipGrid aria-label="Fruit selection">
+              <mat-chip-row *ngFor="let fruit of autocompleteFruits" (removed)="autocompleteRemove(fruit)">
+                {{fruit}}
+                <button matChipRemove [attr.aria-label]="'remove ' + fruit">
+                  <mat-icon>cancel</mat-icon>
+                </button>
+              </mat-chip-row>
+            </mat-chip-grid>
+            <input placeholder="New Fruit..." #fruitInput [formControl]="fruitCtrl"
+                   [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
+                   [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                   (matChipInputTokenEnd)="autocompleteAdd($event)"/>
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="autocompleteSelected($event)">
+              <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
+                {{fruit}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      </div>
+
+      <p></p>
+      <div class="example">
+        <mat-chip-listbox aria-label="Dog selection">
+          <mat-chip>
+            <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+                 alt="Photo of a Shiba Inu"/>
+            Dog one
+          </mat-chip>
+          <mat-chip color="primary">
+            <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+                 alt="Photo of a Shiba Inu"/>
+            Dog two
+          </mat-chip>
+          <mat-chip color="accent">
+            <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+                 alt="Photo of a Shiba Inu"/>
+            Dog three
+          </mat-chip>
+        </mat-chip-listbox>
+      </div>
+
+      <p>Stacked CHips</p>
+      <div class="example">
+        <mat-chip-listbox class="mat-mdc-chip-set-stacked" aria-label="Color selection">
+          <mat-chip-option *ngFor="let chip of availableColors" selected [color]="chip.color">
+            {{chip.name}}
+          </mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+    </div>
+  </div>
+</section>
+

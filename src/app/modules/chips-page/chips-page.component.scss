@@ -1,0 +1,18 @@
+@import "variables";
+@import "page";
+
+.chips-page {
+  .examples {
+    margin-top: 20px;
+
+    .example {
+      margin-bottom: 30px;
+
+      .my-basic-chip {
+        background-color: blue;
+        color: white;
+        border-radius: 20px;
+      }
+    }
+  }
+}

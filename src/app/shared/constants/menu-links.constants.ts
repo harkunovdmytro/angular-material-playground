@@ -44,7 +44,7 @@ export const menuLinks: IMenuLink[] = [
   {
     name: 'Chips',
     link: 'chips',
-    active: false,
+    active: true,
   },
   {
     name: 'Core',

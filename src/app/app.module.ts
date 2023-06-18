@@ -9,6 +9,14 @@ import { UnsubscriberComponent } from './shared/components/unsubscriber/unsubscr
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonPageComponent } from './modules/mat-button-page/mat-button-page.component';
 import { MatButtonModule } from '@angular/material/button';
+import { ChipsPageComponent } from './modules/chips-page/chips-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatInputModule } from '@angular/material/input';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -16,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
     HomePageComponent,
     UnsubscriberComponent,
     MatButtonPageComponent,
+    ChipsPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,6 +32,14 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
+    FormsModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    ReactiveFormsModule,
+    MatChipsModule,
+    MatInputModule,
+    MatAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
